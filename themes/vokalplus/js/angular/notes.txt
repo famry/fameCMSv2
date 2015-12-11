@@ -1,0 +1,299 @@
+	vokalplusApp.controller('memberController', function($scope,$modal,socket) {
+	    	
+	    	$scope.modal_testimonial= function () {
+				       	//$scope.id_tomember = idmember;
+					    var modalInstance = $modal.open({
+					      templateUrl: 'add_testimonial.html',
+					      windowClass: 'post content-testimonial reveal-modal',
+	      				  controller: 'addTestiController',
+					      resolve: {
+						        to_member: function () {
+						          return $scope.id_member;
+						        },
+						        to_displayname: function () {
+						          return $scope.display_name;
+						        },
+						        to_username: function () {
+						          return $scope.username;
+						        }
+						      }
+					    });
+
+					  };
+			
+			$scope.edit_profile= function () {
+					    var modalInstance = $modal.open({
+					      templateUrl: 'edit-profile.html',
+					      windowClass: 'modal-app reveal-modal profile-medium',
+	      				  controller: 'ProfileController',
+					     
+					  });
+					};
+
+		    //any code in here will automatically have an apply run afterwards
+			
+		     socket.on('refresh profile', function (data) {
+		     	if (data.pic !=""){
+			     	$scope.picture=data.pic;
+			     }
+		          $scope.display_name=data.name;
+		          $scope.about_me=data.bio;
+		          $scope.location=data.location;
+		          $scope.socmed_1=data.socmed_1;
+		          $scope.socmed_2=data.socmed_2;
+		          $scope.socmed_3=data.socmed_3;
+		          $scope.socmed_4=data.socmed_4;
+		          $scope.socmed_5=data.socmed_5;
+		          $scope.socmed_6=data.socmed_6;
+		          $scope.socmed_7=data.socmed_7;
+
+		          //$(".profile-name").text(data.bio);
+		          //$(".profile-name").text(data.location);
+		        })
+			    // Set a variable on the scope to reference the "person" instance
+			    // from the HTML template.
+			    //$scope.personInstance = profile;
+		     });
+			vokalplusApp.controller('ProfileController', function($scope,$http,$modalInstance,socket) {
+					/*$scope.loading = true;
+			  		$scope.postDetails = [];
+			  		$http.get(baseURL+'member/getDataProfile/')
+			    	.success(function(data) {
+				    	$scope.loading = false;
+				    	$scope.member_pic = data[0].picture;
+				    	$scope.member_name = data[0].display_name;
+				    	$scope.member_bio = data[0].about_me;
+				    	$scope.member_location = data[0].location;
+				    	$scope.socmed_1= data[0].socmed_1;
+				    	$scope.socmed_2= data[0].socmed_2;
+				    	$scope.socmed_3= data[0].socmed_3;
+				    	$scope.socmed_4= data[0].socmed_4;
+				    	$scope.socmed_5= data[0].socmed_5;
+				    	$scope.socmed_6= data[0].socmed_6;
+				    	$scope.socmed_7= data[0].socmed_7;
+				    	//$scope.youtube_url = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+data[0].content_url);
+				    	//$scope.sc_url = $sce.trustAsResourceUrl('https://w.soundcloud.com/player/?url='+data[0].content_url+'&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true');
+				    	//$scope.htmlcontent = $sce.trustAsHtml(data[0].content);*/
+
+				    	
+		  			})
+					
+					$scope.url = baseURL+'member/update_profile';
+					$scope.cancel = function () {
+					    $modalInstance.dismiss('cancel');
+					  };
+			        // function to submit the form after all validation has occurred            
+			         $scope.submitForm = function() {
+			         				$scope.member_pic = editProfileForm.elements["base64profpic"].value;
+							    	$scope.member_name = editProfileForm.elements["member_name"].value;
+							    	$scope.member_bio = editProfileForm.elements["member_bio"].value;
+							    	$scope.member_location = editProfileForm.elements["member_location"].value;
+							    	$scope.socmed_1 = editProfileForm.elements["socmed_1"].value;
+							    	$scope.socmed_2 = editProfileForm.elements["socmed_2"].value;
+							    	$scope.socmed_3 = editProfileForm.elements["socmed_3"].value;
+							    	$scope.socmed_4 = editProfileForm.elements["socmed_4"].value;
+							    	$scope.socmed_5 = editProfileForm.elements["socmed_5"].value;
+							    	$scope.socmed_6 = editProfileForm.elements["socmed_6"].value;
+							    	$scope.socmed_7 = editProfileForm.elements["socmed_7"].value;
+						            //var elem = angular.element($element);
+						            var datapost = $('#form_profile').serialize();
+						            //var dt = $(elem.parent()).serialize();
+						            $http({
+						                method: 'POST',
+						                url: $scope.url,
+						                data: datapost,
+						                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+						            }).success(function(data, status) {
+										if(data.status == 'success'){
+											/*socket.emit('profile updated', 
+												{
+													'pic': member_pic,
+													'name': member_name,
+													'bio': member_bio,
+													'location': member_location,
+													'socmed_1': socmed_1,
+													'socmed_2': socmed_2,
+													'socmed_3': socmed_3,
+													'socmed_4': socmed_4,
+													'socmed_5': socmed_5,
+													'socmed_6': socmed_6,
+													'socmed_7': socmed_7
+												});*/
+											alert(data.message);
+											window.location.href = baseURL+$scope.username;
+											//$('#edit-profile').foundation('reveal', 'close');
+										}
+						            }).error(function(data, status) {
+						               alert("Error !! Please try again later!!");
+						            });
+						            return false;
+						        };
+
+			    });
+	
+			vokalplusApp.controller('favArtistController', function($scope,$element,$http) {
+				        $scope.numArtists = [1,2,3,4,5,6,7,8,9,10];
+				        $scope.mySplit = function(string, nb) {
+						    $scope.array = string.split('<br />');
+						    return $scope.result = $scope.array[nb];
+						}
+						
+					        $scope.url = baseURL+'member/update_favartist';
+					        $scope.submitForm = function() {
+					            //var elem = angular.element($element);
+					            var datapost = $('#form_favartist').serialize();
+					            //var dt = $(elem.parent()).serialize();
+					            $http({
+					                method: 'POST',
+					                url: $scope.url,
+					                data: datapost,
+					                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+					            }).success(function(data, status) {
+									//$('#fav-artist-edit').foundation('reveal', 'close');
+					                alert(data.message);
+					                window.location.href = baseURL+$scope.username;
+					            }).error(function(data, status) {
+					               alert("Error !! Please try again later!!");
+					            });
+					            return false;
+					        };
+				    });
+				
+			vokalplusApp.controller('ManageTestiController', function($scope,$http,$timeout) {
+		        // function to submit the form after all validation has occurred 
+		        //$scope.postEntry = [];
+		       
+			    $http.get(baseURL+'member/getAllTesti')
+			    .success(function(testi) {
+			    	 $timeout(function(){
+			    	$scope.testiList = testi;
+			    	 });
+	    		})
+
+		    });
+    
+			  
+			    vokalplusApp.controller('editDisplayPicture', function($scope){
+			      $scope.myImage='';
+			        $scope.myCroppedImage='';
+			 
+			        var handleFileSelect=function(evt) {
+			          var file=evt.currentTarget.files[0];
+			          var reader = new FileReader();
+			          reader.onload = function (evt) {
+			            $scope.$apply(function($scope){
+			              $scope.myImage=evt.target.result;
+			            });
+			          };
+			          reader.readAsDataURL(file);
+			        };
+			        angular.element(document.querySelector('#file-dpimg')).on('change',handleFileSelect);
+			    	$scope.submitForm = function() {
+				    	$scope.submitted = true;
+				    	$('#thumbDP').attr('src',$scope.myCroppedImage);
+				    	$('#base64profpic').attr('value',$scope.myCroppedImage);
+						$('#changeDPModal').foundation('reveal', 'close');
+						$('#edit-profile').foundation('reveal', 'open');
+				    }
+			    });
+			    
+		    		vokalplusApp.controller('managePhoto', function($scope) {
+				     	 $scope.editImage = function(id_img) {
+				     	 	$('#post-edit-image').foundation('reveal', 'open');
+					        	//alert(id_img);
+					        
+					    	
+				              $('#editimageid').attr('value',id_img);
+
+							};
+				     	
+					    // Set a variable on the scope to reference the "person" instance
+					    // from the HTML template.
+					    //$scope.personInstance = profile;
+				     });	
+			    
+					vokalplusApp.controller('addImageController', function($scope,$http) {
+						$scope.newImage='';
+				        $scope.newCroppedImage='';
+
+				        var handleFileSelect=function(evt) {
+				          var file=evt.currentTarget.files[0];
+				          var reader = new FileReader();
+				          reader.onload = function (evt) {
+				            $scope.$apply(function($scope){
+				              $scope.newImage=evt.target.result;
+				            });
+				          };
+				          reader.readAsDataURL(file);
+				        };
+				        angular.element(document.querySelector('#file-newimg')).on('change',handleFileSelect);
+						
+				        // function to submit the form after all validation has occurred            
+				          $scope.submitForm = function() {
+						  			$scope.submitted = true;
+						    		$scope.url = baseURL+'new_post/add_image';
+				    				//$('#base64newimage').attr('value',$scope.newCroppedImage);
+						  			 var datapost = $('#addImageForm').serialize();
+						  			$http({
+						                method: 'POST',
+						                url: $scope.url,
+						                data: datapost,
+						                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+						            }).success(function(data, status) {
+										if(data.status == 'success'){
+											alert(data.message);
+											window.location.href = baseURL+$scope.username;
+											//$('#post-new-image').foundation('reveal', 'close');
+										}
+						            }).error(function(data, status) {
+						               alert("Error !! Please try again later!!");
+						            });
+						            return false;
+						        };
+
+				    });
+					vokalplusApp.controller('editImageController', function($scope,$http) {
+							var idphoto = document.getElementById('editimageid').value;
+
+				        	//var idphoto= editImageForm.elements["id_img"].value;
+							//$scope.idimg = idphoto;
+							$scope.idimg = '';
+							$scope.editImage='';
+					        $scope.editCroppedImage='';
+
+					        var handleFileSelect=function(evt) {
+					          var file=evt.currentTarget.files[0];
+					          var reader = new FileReader();
+					          reader.onload = function (evt) {
+					            $scope.$apply(function($scope){
+					              $scope.editImage=evt.target.result;
+					            });
+					          };
+					          reader.readAsDataURL(file);
+					        };
+					        angular.element(document.querySelector('#file-editimg')).on('change',handleFileSelect);
+							
+					        // function to submit the form after all validation has occurred            
+					         /* $scope.submitForm = function() {
+							  			$scope.submitted = true;
+							    		$scope.url = baseURL+'new_post/edit_image';
+					    				//$('#base64newimage').attr('value',$scope.newCroppedImage);
+							  			 var datapost = $('#editImageForm').serialize();
+							  			$http({
+							                method: 'POST',
+							                url: $scope.url,
+							                data: datapost,
+							                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+							            }).success(function(data, status) {
+											if(data.status == 'success'){
+												alert(data.message);
+												window.location.href = baseURL+$scope.username;
+												//$('#post-new-image').foundation('reveal', 'close');
+											}
+							            }).error(function(data, status) {
+							               alert("Error !! Please try again later!!");
+							            });
+							            return false;
+							        };*/
+
+					    });

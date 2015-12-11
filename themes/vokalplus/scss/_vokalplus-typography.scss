@@ -1,0 +1,28 @@
+/**
+* Typography
+*/
+@font-face {
+	font-family: 'Quattrocento Sans';
+	src: url('../fonts/quattrocentosans-regular-webfont.eot?') format('eot'), url('../fonts/quattrocentosans-regular-webfont.woff') format('woff'), url('../fonts/quattrocentosans-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Quattrocento Sans';
+	src: url('../fonts/quattrocentosans-bold-webfont.eot?') format('eot'), url('../fonts/quattrocentosans-bold-webfont.woff') format('woff'), url('../fonts/quattrocentosans-bold-webfont.ttf') format('truetype');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Quattrocento Sans';
+	src: url('../fonts/quattrocentosans-it-webfont.eot?') format('eot'), url('../fonts/quattrocentosans-it-webfont.woff') format('woff'), url('../fonts/quattrocentosans-it-webfont.ttf') format('truetype');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Quattrocento Sans';
+	src: url('../fonts/quattrocentosans-bolditalic-webfont.eot?') format('eot'), url('../fonts/quattrocentosans-bolditalic-webfont.woff') format('woff'), url('../fonts/quattrocentosans-bolditalic-webfont.ttf') format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+
+$font__quattrocento : 'Quattrocento Sans', 'Helvetica', Arial, 'sans-serif';

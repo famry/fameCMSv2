@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+      <title>VokalPlus</title>
+      <link rel="stylesheet" href="stylesheets/app.css" />
+      <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="no-header">  
+    <div class="row">
+      <div class="small-12 columns page" id="content">
+        <div class="row page">
+          <div class="small-12 columns">
+              
+            <div class="entry entry-page">
+              <h2>Buttons</h2>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Basic Button</h3>
+                  <a href="#" class="button">Search</a>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Primary Button</h3>
+                  <a href="#" class="button primary">Primary</a>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3> Follow Button</h3>
+                  <a href="#" class="button follow"><span class="button-icon"></span> <span class="copy">Follow</span></a>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Unfollow Button</h3>
+                  <a href="#" class="button unfollow"><span class="button-icon"></span> <span class="copy">Unfollow</span></a>
+                  <br><br>
+                </div><!-- .small-4.columns -->
+              </div>
+
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3> Facebook Login Button</h3>
+                  <a href="#" class="button login-with-facebook">Login With Facebook</a>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Google+ Login Button</h3>
+                  <a href="#" class="button login-with-googleplus">Login With Google</a>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Close Popup</h3>
+
+                  <a href="#" class="close-popup">Close</a>
+
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Prev - Next Nav</h3>
+
+                  <a href="#" class="nav posts-prev">Previous</a>
+                  <a href="#" class="nav posts-next">Next</a>
+
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Share Nav</h3>
+
+                  <a href="#" class="nav twitter">Twitter</a>
+                  <a href="#" class="nav facebook">Facebook</a>
+                  <a href="#" class="nav googleplus">Google+</a>
+
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+          </div><!-- .small-12.columns -->
+
+
+        </div><!-- .row -->
+      </div><!-- .small-12.columns#content -->
+    </div><!-- .row -->
+    
+    <div id="dropdown-overlay" class="hide"></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>       
+    <script src="bower_components/iCheck/icheck.min.js"></script>       
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script> 
+    <script src="bower_components/jquery-ui/ui/autocomplete.js"></script> 
+    <script>
+      $(function() {
+        var users = [
+          {
+            label   : "Alicia Keys",
+            value   : "Alicia Keys",
+            username  : "aliciakeys",
+            avatar : "images/dummy/avatar-40-40-1.jpg"  
+          },
+          {
+            label  : "Jennifer Lopez",
+            value  : "Jennifer Lopez",
+            username  : "jenniferlopez",
+            avatar : "images/dummy/avatar-40-40-2.jpg"  
+          },
+          {
+            label  : "Amy Search",
+            value  : "Amy Search",
+            username  : "amysearch",
+            avatar : "images/dummy/avatar-40-40-3.jpg"  
+          },
+          {
+            label  : "The Aats",
+            value  : "The Aats",
+            username  : "theaats",
+            avatar : "images/dummy/avatar-40-40-4.jpg"  
+          },
+        ];
+        $( ".vokalplus-userpicker-wrap" ).prepend('<div class="vokalplus-userpicker-placeholder"><span></span></div><div class="vokalplus-userpicker-typed"><span></span></div>');
+        $( ".vokalplus-userpicker" ).autocomplete({
+          minLength: 0,
+          source: users,
+          response: function( event, ui ){
+            var picker      = $(this);
+            var wrap        = picker.closest( '.vokalplus-userpicker-wrap' );
+            var typed       = wrap.find( '.vokalplus-userpicker-typed span' );
+            var placeholder = wrap.find( '.vokalplus-userpicker-placeholder span' );
+            var ui_autocomplete = $('.ui-autocomplete.ui-widget-content' );
+
+            // Update background placeholder & typed area
+            if( typeof ui.content[0] === 'undefined' ){
+              typed.empty();
+              placeholder.empty();                          
+            } else {
+              var input       = picker.val();
+              var suggestion  = ui.content[0].label;
+
+              typed.text( input );
+              placeholder.text( suggestion );                          
+            }
+
+          },
+          focus: function( event, ui ){
+            var picker      = $(this);
+            var wrap        = picker.closest( '.vokalplus-userpicker-wrap' );
+            var typed       = wrap.find( '.vokalplus-userpicker-typed span' );
+            var placeholder = wrap.find( '.vokalplus-userpicker-placeholder span' );
+
+            // Empty the suggestion
+            typed.empty();
+            placeholder.empty();                        
+          }
+        }).autocomplete( "instance" )._renderItem = function( ul, item ){
+          // return $( "li" ).append( "<a><span class='user-avatar'><img src='"+ item.avatar +"'></span><span class='user-name'>" + item.label + "</span></a>" );
+          return $( "<li class='userpicker-item-wrap'>" )
+            .attr( "data-value", item.value )
+            .append( '<span class="userpicker-item"><img src="'+item.avatar+'" class="avatar"><span class="name">'+item.label+'</span></span>' )
+            .appendTo( ul );
+        };
+    });   
+    </script>
+    <script src="bower_components/chosen/chosen.jquery.js"></script>
+    <script src="bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/live.js"></script>
+  </body>
+</html>

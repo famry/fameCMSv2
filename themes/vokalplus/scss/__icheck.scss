@@ -1,0 +1,79 @@
+/* iCheck plugin Square skin, blue
+----------------------------------- */
+.icheckbox,
+.iradio {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox {
+    @include sprite_replace_text( checkbox, 14, 14 );
+
+    &.hover {
+        @include sprites-sprite( checkbox );
+        box-shadow: 0 0 2px $color__accent;
+        @include radius( 3px );
+    }
+
+    &.active{
+        @include sprites-sprite( checkbox-active );
+    }
+
+    &.disabled {
+        @include sprites-sprite( checkbox-disabled );
+
+        &:hover{
+            box-shadow: none;
+        }
+    }
+
+    &.checked {
+        @include sprites-sprite( checkbox-checked );
+
+        &.active{            
+            @include sprites-sprite( checkbox-checked-active );
+        }
+
+        &.disabled {
+            @include sprites-sprite( checkbox-checked-disabled );
+        }
+    }
+}
+
+.iradio {
+    @include sprite_replace_text( radio, 14, 14 );
+
+    &.hover {
+        box-shadow: 0 0 2px $color__accent;
+        @include radius( 50% );
+    }
+
+    &.active {
+        @include sprites-sprite( radio-active );
+    }
+
+    &.disabled {
+        @include sprites-sprite( radio-disabled );
+
+        &:hover{
+            box-shadow: none;
+        }
+    }
+
+    &.checked {
+        @include sprites-sprite( radio-checked );
+
+        &.active {
+            @include sprites-sprite( radio-checked-active );
+        }
+
+        &.disabled {
+            @include sprites-sprite( radio-checked-disabled );
+        }
+    }
+}

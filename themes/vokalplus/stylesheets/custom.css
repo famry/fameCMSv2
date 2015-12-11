@@ -1,0 +1,34 @@
+#imgCropArticle {
+      width: 600px;
+      height: 375px;
+      position:relative; /* or fixed or absolute */
+      background-color: #F0F0F0;
+    }
+#imgCropEvent {
+      width: 600px;
+      height: 375px;
+      position:relative; /* or fixed or absolute */
+      background-color: #F0F0F0;
+    }
+.round-imgprofile{
+width: 150px;
+height: 150px;
+border-radius: 75px;
+-webkit-border-radius: 75px;
+-moz-border-radius: 75px;
+background-size:cover !important;
+display:block;	
+margin-right: auto;
+margin-left: auto;
+} 
+.small-imgprofile{
+width: 32px;
+height: 32px;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+background-size:cover !important;	
+display:inline-block;
+height:100%;
+vertical-align: middle;
+}    

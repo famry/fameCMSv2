@@ -1,0 +1,73 @@
+.mce-container{
+	&.mce-panel{
+		border-color: $color__border;
+
+		&.mce-tinymce{
+			padding-right: 1px;
+		}
+	}
+
+	&.mce-toolbar-grp{
+		padding-bottom: 0;
+	}
+}
+
+.mce-window-head,
+.mce-btn{
+	button{
+		box-shadow: none;
+		border-bottom: 0 !important;
+
+		&:hover{
+			background: 0 0;
+			box-shadow: none;			
+		}
+
+		&.button{
+			&:hover{
+				background: 0 0;
+				box-shadow: none;			
+			}
+		}
+	}
+}
+
+button.mce-open{
+	@include radius( 0 );
+}
+
+.mce-container-body{
+	&.mce-flow-layout{
+		padding: 15px 10px 20px;
+		background-color: #f3f3f3;
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #fcfcfc), color-stop(15%, #f3f3f3));
+		background-image: -webkit-linear-gradient(#fcfcfc 1%, #f3f3f3 15%);
+		background-image: -moz-linear-gradient(#fcfcfc 1%, #f3f3f3 15%);
+		background-image: -o-linear-gradient(#fcfcfc 1%, #f3f3f3 15%);
+		background-image: linear-gradient(#fcfcfc 1%, #f3f3f3 15%);
+	}
+}
+
+.mce-btn{
+	&.mce-primary{
+		border: 0;
+		@include radius( 4px );
+		background: $color__accent;
+		font-size: rem-calc( 14px );
+		color: white;
+		text-transform: uppercase;
+		font-family: 'Quattrocento Sans', 'Helvetica', 'sans-serif';
+		box-shadow: 0 1px 0 darken( $color__accent, 10% );
+		cursor: pointer;
+
+		&:hover{
+			background: lighten( $color__accent, 5% );
+		}
+	}
+
+	button[type="button"]{
+		font-family: $font__quattrocento;
+		text-shadow: none;
+		padding: 6px 10px 4px; 
+	}
+}

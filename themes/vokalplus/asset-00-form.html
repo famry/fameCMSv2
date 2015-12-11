@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>VokalPlus</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="no-header">    
+    <div class="row">
+      <div class="small-12 columns page" id="content">
+        <div class="row page">
+          <div class="small-12 columns">
+              
+            <div class="entry entry-page">
+              <br><br>
+              <h2>Forms</h2>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Basic Text Box</h3>
+                  <input type="text">
+                  <br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Alert Text Box</h3>
+                  <input type="text" class="alert">
+                  <br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Disabled Text Box</h3>
+                  <input type="text" disabled="disabled">
+                  <br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Dropdown</h3>
+
+                  <select name="" id="">
+                    <option value="">Alicia Keys</option>
+                    <option value="">Jessie J</option>
+                    <option value="">Dave Grohl</option>
+                    <option value="">MIYAVI</option>
+                    <option value="">The Protocols</option>
+                  </select>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <h3>Dropdown With Pointers</h3>
+                  
+                  <span class="select-with-pointer-wrap">
+                    <select name="" id="">
+                      <option value="">Alicia Keys</option>
+                      <option value="">Jessie J</option>
+                      <option value="">Dave Grohl</option>
+                      <option value="">MIYAVI</option>
+                      <option value="">The Protocols</option>
+                    </select>                  
+                  </span>
+                  <br><br>
+                </div><!-- .small-12.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-6 columns">
+                  <h3>Checkbox</h3>
+                  <input type="checkbox">
+                  <br><br>
+                </div><!-- .small-6.columns -->
+                <div class="small-6 columns">
+                  <h3>Checkbox Disabled</h3>
+                  <input type="checkbox" disabled="disabled" checked="checked">
+                  <input type="checkbox" disabled="disabled">
+                  <br><br>
+                </div><!-- .small-6.columns -->
+              </div>
+
+              <div class="row">
+                <div class="small-6 columns">
+                  <h3>Radiobox</h3>
+                  <input type="radio" name="radio">
+                  <input type="radio" name="radio">
+                  <br><br>
+                </div><!-- .small-6.columns -->
+                <div class="small-6 columns">
+                  <h3>Radiobox Disabled</h3>
+                  <input type="radio" name="radio2" disabled="disabled">
+                  <input type="radio" name="radio2" disabled="disabled" checked="checked">
+                  <br><br>
+                </div><!-- .small-6.columns -->
+              </div>
+
+          </div><!-- .small-12.columns -->
+
+
+        </div><!-- .row -->
+      </div><!-- .small-12.columns#content -->
+    </div><!-- .row -->
+    <div id="dropdown-overlay" class="hide"></div>
+
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>       
+      <script src="bower_components/iCheck/icheck.min.js"></script>       
+              <script src="bower_components/jquery-ui/jquery-ui.js"></script> 
+      <script src="bower_components/jquery-ui/ui/autocomplete.js"></script> 
+      <script>
+        $(function() {
+          var users = [
+            {
+              label   : "Alicia Keys",
+              value   : "Alicia Keys",
+              username  : "aliciakeys",
+              avatar : "images/dummy/avatar-40-40-1.jpg"  
+            },
+            {
+              label  : "Jennifer Lopez",
+              value  : "Jennifer Lopez",
+              username  : "jenniferlopez",
+              avatar : "images/dummy/avatar-40-40-2.jpg"  
+            },
+            {
+              label  : "Amy Search",
+              value  : "Amy Search",
+              username  : "amysearch",
+              avatar : "images/dummy/avatar-40-40-3.jpg"  
+            },
+            {
+              label  : "The Aats",
+              value  : "The Aats",
+              username  : "theaats",
+              avatar : "images/dummy/avatar-40-40-4.jpg"  
+            },
+          ];
+          $( ".vokalplus-userpicker-wrap" ).prepend('<div class="vokalplus-userpicker-placeholder"><span></span></div><div class="vokalplus-userpicker-typed"><span></span></div>');
+          $( ".vokalplus-userpicker" ).autocomplete({
+            minLength: 0,
+            source: users,
+            response: function( event, ui ){
+              var picker      = $(this);
+              var wrap        = picker.closest( '.vokalplus-userpicker-wrap' );
+              var typed       = wrap.find( '.vokalplus-userpicker-typed span' );
+              var placeholder = wrap.find( '.vokalplus-userpicker-placeholder span' );
+              var ui_autocomplete = $('.ui-autocomplete.ui-widget-content' );
+
+              // Update background placeholder & typed area
+              if( typeof ui.content[0] === 'undefined' ){
+                typed.empty();
+                placeholder.empty();                          
+              } else {
+                var input       = picker.val();
+                var suggestion  = ui.content[0].label;
+
+                typed.text( input );
+                placeholder.text( suggestion );                          
+              }
+
+            },
+            focus: function( event, ui ){
+              var picker      = $(this);
+              var wrap        = picker.closest( '.vokalplus-userpicker-wrap' );
+              var typed       = wrap.find( '.vokalplus-userpicker-typed span' );
+              var placeholder = wrap.find( '.vokalplus-userpicker-placeholder span' );
+
+              // Empty the suggestion
+              typed.empty();
+              placeholder.empty();                        
+            }
+          }).autocomplete( "instance" )._renderItem = function( ul, item ){
+            // return $( "li" ).append( "<a><span class='user-avatar'><img src='"+ item.avatar +"'></span><span class='user-name'>" + item.label + "</span></a>" );
+            return $( "<li class='userpicker-item-wrap'>" )
+              .attr( "data-value", item.value )
+              .append( '<span class="userpicker-item"><img src="'+item.avatar+'" class="avatar"><span class="name">'+item.label+'</span></span>' )
+              .appendTo( ul );
+          };
+      });   
+      </script>
+      <script src="bower_components/chosen/chosen.jquery.js"></script>
+      <script src="bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
+      <script src="bower_components/foundation/js/foundation.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/live.js"></script>
+  </body>
+</html>

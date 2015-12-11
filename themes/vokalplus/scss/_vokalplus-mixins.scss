@@ -1,0 +1,95 @@
+// Replace DOM text with image
+@mixin sprite_replace_text( $name, $width, $height ){
+	display: inline-block;
+	text-indent: -999em;
+	@include sprites-sprite($name);
+	width: $width+px;
+	height: $height+px;
+	content: '';
+
+	// @media
+	// only screen and (-webkit-min-device-pixel-ratio: 2),
+	// only screen and (   min--moz-device-pixel-ratio: 2),
+	// only screen and (     -o-min-device-pixel-ratio: 2/1),
+	// only screen and (        min-device-pixel-ratio: 2),
+	// only screen and (                min-resolution: 192dpi),
+	// only screen and (                min-resolution: 2dppx)   { 
+	// 	background: url( '../images/sprites-retina/'+$name+'.png' ) transparent;
+	// 	background-size: 100%;
+	// }
+}
+
+@mixin sprite_replace_text_clickable( $name, $width, $height ){
+	display: inline-block;
+	text-indent: -999em;
+	@include sprites-sprite($name);
+	width: $width+px;
+	height: $height+px;
+	content: '';
+
+	&:hover{
+		@include sprites-sprite( $name + '-hover' );
+	}
+
+	&:active{
+		@include sprites-sprite( $name + '-active' );
+	}
+
+	// @media
+	// only screen and (-webkit-min-device-pixel-ratio: 2),
+	// only screen and (   min--moz-device-pixel-ratio: 2),
+	// only screen and (     -o-min-device-pixel-ratio: 2/1),
+	// only screen and (        min-device-pixel-ratio: 2),
+	// only screen and (                min-resolution: 192dpi),
+	// only screen and (                min-resolution: 2dppx)   { 
+	// 	background: url( '../images/sprites-retina/'+$name+'.png' ) transparent;
+	// 	background-size: 100%;
+	// }
+}
+
+// button styling
+@mixin button_styling( $background, $background_hover, $background_active ){
+	background: $background;
+	box-shadow: 0 2px 0 darken( $background, 8% );
+	
+	&:focus,
+	&:hover{
+		background: $background_hover;
+		box-shadow: 0 2px 0 darken( $background_hover, 8% );
+	}
+
+	&:active{
+		background: $background_active;
+		box-shadow: 0 2px 0 darken( $background_active, 8% );
+	}
+}
+
+// The "OR"
+@mixin or{
+	position: absolute;
+	top: 50%;
+	right: -12.5px;
+	margin: -12.5px 0 0;
+	color: white;
+	background: $color__border-top-navigation;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	font-size: rem-calc( 12px );
+	text-transform: lowercase;
+	line-height: 25px;
+	@include radius( 50% );	
+}
+
+@mixin close_reveal_modal {
+	.close-reveal-modal{
+		position: absolute;
+		top: 10px;
+		right: -40px;
+		display: block;
+		padding: 0;
+		font-size: rem-calc( 10px );
+		@include sprite_replace_text_clickable( close-reveal-modal, 40, 40 );
+		color: $color__accent;
+	}	
+}

@@ -1,0 +1,14 @@
+FameCMS v.1.0
+
+- Login via email
+-- Check email validation [v]
+-- remember me 
+
+- Register
+-- Check username [v]
+-- check email [v]
+
+- forget password (with expiration)
+- resend validation code (with expiration)
+
+- Restrict Feature per group user

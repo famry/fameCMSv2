@@ -1,0 +1,251 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   'C:\\Users\\Faizal\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular-ui-bootstrap' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.2
+4 verbose install initial load of C:\xampp\htdocs\ci\smartcms\package.json
+5 verbose installManyTop reading scoped package data from C:\xampp\htdocs\ci\smartcms\node_modules\angucomplete-alt\package.json
+6 verbose installManyTop reading scoped package data from C:\xampp\htdocs\ci\smartcms\node_modules\angular\package.json
+7 verbose installManyTop reading scoped package data from C:\xampp\htdocs\ci\smartcms\node_modules\angular-base64-upload\package.json
+8 info package.json angucomplete-alt@1.0.3 No license field.
+9 verbose readDependencies loading dependencies from C:\xampp\htdocs\ci\smartcms\package.json
+10 silly cache add args [ 'angular-ui-bootstrap', null ]
+11 verbose cache add spec angular-ui-bootstrap
+12 silly cache add parsed spec { raw: 'angular-ui-bootstrap',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'angular-ui-bootstrap',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 silly addNamed angular-ui-bootstrap@*
+14 verbose addNamed "*" is a valid semver range for angular-ui-bootstrap
+15 silly addNameRange { name: 'angular-ui-bootstrap', range: '*', hasData: false }
+16 silly mapToRegistry name angular-ui-bootstrap
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-bootstrap
+20 verbose addNameRange registry:https://registry.npmjs.org/angular-ui-bootstrap not in flight; fetching
+21 verbose request uri https://registry.npmjs.org/angular-ui-bootstrap
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 01:37:44
+24 verbose request id 577795ed6c9cce9b
+25 verbose etag "2QSEMGJ0RC2TMXVJWETBKMC01"
+26 http request GET https://registry.npmjs.org/angular-ui-bootstrap
+27 http 304 https://registry.npmjs.org/angular-ui-bootstrap
+28 silly get cb [ 304,
+28 silly get   { date: 'Wed, 05 Aug 2015 18:37:43 GMT',
+28 silly get     via: '1.1 varnish',
+28 silly get     'cache-control': 'max-age=60',
+28 silly get     etag: '"2QSEMGJ0RC2TMXVJWETBKMC01"',
+28 silly get     age: '0',
+28 silly get     connection: 'keep-alive',
+28 silly get     'x-served-by': 'cache-sin6926-SIN',
+28 silly get     'x-cache': 'MISS',
+28 silly get     'x-cache-hits': '0',
+28 silly get     'x-timer': 'S1438799863.194863,VS0,VE208',
+28 silly get     vary: 'Accept' } ]
+29 verbose etag https://registry.npmjs.org/angular-ui-bootstrap from cache
+30 verbose get saving angular-ui-bootstrap to C:\Users\Faizal\AppData\Roaming\npm-cache\registry.npmjs.org\angular-ui-bootstrap\.cache.json
+31 silly addNameRange number 2 { name: 'angular-ui-bootstrap', range: '*', hasData: true }
+32 silly addNameRange versions [ 'angular-ui-bootstrap',
+32 silly addNameRange   [ '0.12.1', '0.13.0', '0.13.1', '0.13.2' ] ]
+33 silly addNamed angular-ui-bootstrap@0.13.2
+34 verbose addNamed "0.13.2" is a plain semver version for angular-ui-bootstrap
+35 silly cache afterAdd angular-ui-bootstrap@0.13.2
+36 verbose afterAdd C:\Users\Faizal\AppData\Roaming\npm-cache\angular-ui-bootstrap\0.13.2\package\package.json not in flight; writing
+37 verbose afterAdd C:\Users\Faizal\AppData\Roaming\npm-cache\angular-ui-bootstrap\0.13.2\package\package.json written
+38 silly install resolved [ { name: 'angular-ui-bootstrap',
+38 silly install resolved     version: '0.13.2',
+38 silly install resolved     description: 'Bootstrap widgets for Angular',
+38 silly install resolved     main: 'index.js',
+38 silly install resolved     homepage: 'http://angular-ui.github.io/bootstrap/',
+38 silly install resolved     repository:
+38 silly install resolved      { type: 'git',
+38 silly install resolved        url: 'git+https://github.com/angular-ui/bootstrap.git' },
+38 silly install resolved     keywords:
+38 silly install resolved      [ 'angular',
+38 silly install resolved        'bootstrap',
+38 silly install resolved        'angular-ui',
+38 silly install resolved        'components',
+38 silly install resolved        'client-side' ],
+38 silly install resolved     author: { name: 'https://github.com/angular-ui/bootstrap/graphs/contributors' },
+38 silly install resolved     peerDependencies:
+38 silly install resolved      { angular: '^1.3.x || >= 1.4.0-beta.0 || >= 1.5.0-beta.0',
+38 silly install resolved        bootstrap: '^3.x' },
+38 silly install resolved     license: 'MIT',
+38 silly install resolved     gitHead: 'e6fb118832f6bc976c949bb9656fafbfca83e9a6',
+38 silly install resolved     bugs: { url: 'https://github.com/angular-ui/bootstrap/issues' },
+38 silly install resolved     _id: 'angular-ui-bootstrap@0.13.2',
+38 silly install resolved     scripts: {},
+38 silly install resolved     _shasum: 'c290709253c1c87ae90f1ca097e8bbb30e0f3d67',
+38 silly install resolved     _from: 'angular-ui-bootstrap@*',
+38 silly install resolved     _npmVersion: '2.9.0',
+38 silly install resolved     _nodeVersion: '2.0.1',
+38 silly install resolved     _npmUser: { name: 'foxandxss', email: 'Foxandxss@gmail.com' },
+38 silly install resolved     dist:
+38 silly install resolved      { shasum: 'c290709253c1c87ae90f1ca097e8bbb30e0f3d67',
+38 silly install resolved        tarball: 'http://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-0.13.2.tgz' },
+38 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+38 silly install resolved     directories: {},
+38 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-0.13.2.tgz',
+38 silly install resolved     readme: 'ERROR: No README data found!' } ]
+39 info install angular-ui-bootstrap@0.13.2 into C:\xampp\htdocs\ci\smartcms
+40 info installOne angular-ui-bootstrap@0.13.2
+41 verbose installOne of angular-ui-bootstrap to C:\xampp\htdocs\ci\smartcms not in flight; installing
+42 verbose lock using C:\Users\Faizal\AppData\Roaming\npm-cache\_locks\angular-ui-bootstrap-651d69d0960ae05a.lock for C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+43 silly install write writing angular-ui-bootstrap 0.13.2 to C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+44 verbose unbuild node_modules\angular-ui-bootstrap
+45 silly gentlyRm C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap is being purged from base C:\xampp\htdocs\ci\smartcms
+46 verbose gentlyRm don't care about contents; nuking C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+47 verbose tar unpack C:\Users\Faizal\AppData\Roaming\npm-cache\angular-ui-bootstrap\0.13.2\package.tgz
+48 verbose tar unpacking to C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+49 silly gentlyRm C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap is being purged
+50 verbose gentlyRm don't care about contents; nuking C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+51 silly gunzTarPerm modes [ '777', '666' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+54 silly gunzTarPerm extractEntry .npmignore
+55 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+56 silly gunzTarPerm extractEntry README.md
+57 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+58 silly gunzTarPerm extractEntry index.js
+59 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+60 silly gunzTarPerm extractEntry ui-bootstrap-tpls.js
+61 silly gunzTarPerm modified mode [ 'ui-bootstrap-tpls.js', 420, 438 ]
+62 silly gunzTarPerm extractEntry ui-bootstrap-tpls.min.js
+63 silly gunzTarPerm modified mode [ 'ui-bootstrap-tpls.min.js', 420, 438 ]
+64 silly gunzTarPerm extractEntry ui-bootstrap.js
+65 silly gunzTarPerm modified mode [ 'ui-bootstrap.js', 420, 438 ]
+66 silly gunzTarPerm extractEntry ui-bootstrap.min.js
+67 silly gunzTarPerm modified mode [ 'ui-bootstrap.min.js', 420, 438 ]
+68 silly gunzTarPerm extractEntry .idea/.name
+69 silly gunzTarPerm modified mode [ '.idea/.name', 420, 438 ]
+70 silly gunzTarPerm extractEntry .idea/bootstrap-bower-upstream.iml
+71 silly gunzTarPerm modified mode [ '.idea/bootstrap-bower-upstream.iml', 420, 438 ]
+72 silly gunzTarPerm extractEntry .idea/misc.xml
+73 silly gunzTarPerm modified mode [ '.idea/misc.xml', 420, 438 ]
+74 silly gunzTarPerm extractEntry .idea/modules.xml
+75 silly gunzTarPerm modified mode [ '.idea/modules.xml', 420, 438 ]
+76 silly gunzTarPerm extractEntry .idea/vcs.xml
+77 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 420, 438 ]
+78 silly gunzTarPerm extractEntry .idea/workspace.xml
+79 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 420, 438 ]
+80 silly gunzTarPerm extractEntry ui-bootstrap-csp.css
+81 silly gunzTarPerm modified mode [ 'ui-bootstrap-csp.css', 420, 438 ]
+82 verbose write writing to C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap\package.json
+83 info preinstall angular-ui-bootstrap@0.13.2
+84 verbose readDependencies loading dependencies from C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap\package.json
+85 silly prepareForInstallMany adding bootstrap@^3.x from angular-ui-bootstrap peerDependencies
+86 warn peerDependencies The peer dependency bootstrap@^3.x included from angular-ui-bootstrap will no
+87 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+88 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+89 verbose readDependencies loading dependencies from C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap\package.json
+90 silly install resolved []
+91 verbose about to build C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+92 info build C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+93 info linkStuff angular-ui-bootstrap@0.13.2
+94 silly linkStuff angular-ui-bootstrap@0.13.2 has C:\xampp\htdocs\ci\smartcms\node_modules as its parent node_modules
+95 verbose linkBins angular-ui-bootstrap@0.13.2
+96 verbose linkMans angular-ui-bootstrap@0.13.2
+97 verbose rebuildBundles angular-ui-bootstrap@0.13.2
+98 info install angular-ui-bootstrap@0.13.2
+99 info postinstall angular-ui-bootstrap@0.13.2
+100 verbose readDependencies loading dependencies from C:\xampp\htdocs\ci\smartcms\package.json
+101 verbose targetResolver reading package data from C:\xampp\htdocs\ci\smartcms\node_modules\angucomplete-alt\package.json
+102 verbose targetResolver reading package data from C:\xampp\htdocs\ci\smartcms\node_modules\angular\package.json
+103 verbose targetResolver reading package data from C:\xampp\htdocs\ci\smartcms\node_modules\angular-base64-upload\package.json
+104 verbose targetResolver reading package data from C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap\package.json
+105 silly cache add args [ 'bootstrap@^3.x', null ]
+106 verbose cache add spec bootstrap@^3.x
+107 silly cache add parsed spec { raw: 'bootstrap@^3.x',
+107 silly cache add   scope: null,
+107 silly cache add   name: 'bootstrap',
+107 silly cache add   rawSpec: '^3.x',
+107 silly cache add   spec: '>=3.0.0 <4.0.0',
+107 silly cache add   type: 'range' }
+108 silly addNamed bootstrap@>=3.0.0 <4.0.0
+109 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for bootstrap
+110 silly addNameRange { name: 'bootstrap', range: '>=3.0.0 <4.0.0', hasData: false }
+111 silly mapToRegistry name bootstrap
+112 silly mapToRegistry using default registry
+113 silly mapToRegistry registry https://registry.npmjs.org/
+114 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+115 verbose addNameRange registry:https://registry.npmjs.org/bootstrap not in flight; fetching
+116 verbose request uri https://registry.npmjs.org/bootstrap
+117 verbose request no auth needed
+118 info attempt registry request try #1 at 01:37:46
+119 verbose etag "A68ENMYUXLIJ9ZHMP3E5S4OWK"
+120 http request GET https://registry.npmjs.org/bootstrap
+121 http 304 https://registry.npmjs.org/bootstrap
+122 silly get cb [ 304,
+122 silly get   { date: 'Wed, 05 Aug 2015 18:37:45 GMT',
+122 silly get     via: '1.1 varnish',
+122 silly get     'cache-control': 'max-age=60',
+122 silly get     etag: '"A68ENMYUXLIJ9ZHMP3E5S4OWK"',
+122 silly get     age: '0',
+122 silly get     connection: 'keep-alive',
+122 silly get     'x-served-by': 'cache-sin6924-SIN',
+122 silly get     'x-cache': 'HIT',
+122 silly get     'x-cache-hits': '1',
+122 silly get     'x-timer': 'S1438799865.380258,VS0,VE245',
+122 silly get     vary: 'Accept' } ]
+123 verbose etag https://registry.npmjs.org/bootstrap from cache
+124 verbose get saving bootstrap to C:\Users\Faizal\AppData\Roaming\npm-cache\registry.npmjs.org\bootstrap\.cache.json
+125 silly addNameRange number 2 { name: 'bootstrap', range: '>=3.0.0 <4.0.0', hasData: true }
+126 silly addNameRange versions [ 'bootstrap',
+126 silly addNameRange   [ '0.0.1',
+126 silly addNameRange     '0.0.2',
+126 silly addNameRange     '3.1.1',
+126 silly addNameRange     '3.2.0',
+126 silly addNameRange     '3.3.0',
+126 silly addNameRange     '3.3.1',
+126 silly addNameRange     '3.3.2',
+126 silly addNameRange     '3.3.4',
+126 silly addNameRange     '3.3.5' ] ]
+127 silly addNamed bootstrap@3.3.5
+128 verbose addNamed "3.3.5" is a plain semver version for bootstrap
+129 silly mapToRegistry name bootstrap
+130 silly mapToRegistry using default registry
+131 silly mapToRegistry registry https://registry.npmjs.org/
+132 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+133 verbose addRemoteTarball https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz not in flight; adding
+134 verbose addRemoteTarball [ 'https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz',
+134 verbose addRemoteTarball   '1777ab79299b128d87dce7cbd86fdc46ac69c0b1' ]
+135 info retry fetch attempt 1 at 01:37:48
+136 info attempt registry request try #1 at 01:37:48
+137 http fetch GET https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz
+138 http fetch 200 https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz
+139 silly fetchAndShaCheck shasum 1777ab79299b128d87dce7cbd86fdc46ac69c0b1
+140 verbose unlock done using C:\Users\Faizal\AppData\Roaming\npm-cache\_locks\angular-ui-bootstrap-651d69d0960ae05a.lock for C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+141 verbose stack Error: shasum check failed for C:\Users\Faizal\AppData\Local\Temp\npm-8280-cf7cfcf5\registry.npmjs.org\bootstrap\-\bootstrap-3.3.5.tgz
+141 verbose stack Expected: 1777ab79299b128d87dce7cbd86fdc46ac69c0b1
+141 verbose stack Actual:   2f0185b6ca0362495b80d3d6d3ccc36925ae7b3d
+141 verbose stack From:     https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz
+141 verbose stack     at C:\Users\Faizal\AppData\Roaming\npm\node_modules\npm\node_modules\sha\index.js:38:8
+141 verbose stack     at ReadStream.<anonymous> (C:\Users\Faizal\AppData\Roaming\npm\node_modules\npm\node_modules\sha\index.js:85:7)
+141 verbose stack     at ReadStream.emit (events.js:129:20)
+141 verbose stack     at _stream_readable.js:908:16
+141 verbose stack     at process._tickCallback (node.js:355:11)
+142 verbose cwd C:\xampp\htdocs\ci\smartcms
+143 error Windows_NT 6.3.9600
+144 error argv "node" "C:\\Users\\Faizal\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-ui-bootstrap"
+145 error node v0.12.2
+146 error npm  v2.11.2
+147 error shasum check failed for C:\Users\Faizal\AppData\Local\Temp\npm-8280-cf7cfcf5\registry.npmjs.org\bootstrap\-\bootstrap-3.3.5.tgz
+147 error Expected: 1777ab79299b128d87dce7cbd86fdc46ac69c0b1
+147 error Actual:   2f0185b6ca0362495b80d3d6d3ccc36925ae7b3d
+147 error From:     https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz
+148 error If you need help, you may report this error at:
+148 error     <https://github.com/npm/npm/issues>
+149 verbose exit [ 1, true ]
+150 verbose unbuild node_modules\angular-ui-bootstrap
+151 info preuninstall angular-ui-bootstrap@0.13.2
+152 info uninstall angular-ui-bootstrap@0.13.2
+153 verbose unbuild rmStuff angular-ui-bootstrap@0.13.2 from C:\xampp\htdocs\ci\smartcms\node_modules
+154 info postuninstall angular-ui-bootstrap@0.13.2
+155 silly gentlyRm C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap is being purged from base C:\xampp\htdocs\ci\smartcms
+156 verbose gentlyRm don't care about contents; nuking C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+157 silly vacuum-fs purging C:\xampp\htdocs\ci\smartcms\node_modules\angular-ui-bootstrap
+158 silly vacuum-fs quitting because other entries in C:\xampp\htdocs\ci\smartcms\node_modules

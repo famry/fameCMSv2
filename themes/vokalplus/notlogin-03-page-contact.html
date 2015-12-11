@@ -1,0 +1,2187 @@
+
+
+<!doctype html>
+    <html class="no-js" lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+      <title>VokalPlus</title>
+      <link rel="stylesheet" href="stylesheets/app.css" />
+      <script src="bower_components/modernizr/modernizr.js"></script>
+    </head>
+    <body class="default">
+
+      
+      <div id="top-navigation" class="contain-to-grid sticky">
+        <nav class="top-bar" data-topbar role="navigation">
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="#">VokalPlus</a></h1>
+            </li>
+             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              
+              
+              <li class="has-or"><a href="#" data-reveal-id="account-login">Login</a> <span class="or">Or</span></li>
+              <li><a href="#" data-reveal-id="account-register">Sign Up</a></li>
+
+                          </ul>
+
+            <ul class="search-wrap">
+              <li>
+                  <a href="#" class="search-toggle" id="toggle-search-top-nav"><span class="search-toggle-icon">Search</span><span class="search-toggle-tail"></span></a>
+              </li>
+            </ul>
+
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="active"><a href="#">Explore</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Directory</a></li>
+              <li><a href="#">Store</a></li>
+            </ul>
+          </section>
+
+          <div id="top-navigation-dropdown-overlay"></div>
+        </nav>
+      </div>
+      <form action="" id="search-form">
+        <div class="row">
+          <div class="small-12 columns">
+            <input type="text" class="input-text" placeholder="Type keywords and press enter...">
+            <input type="submit" value="search" class="submit">          
+          </div>
+        </div>
+      </form>
+
+      <!-- POPUP -->
+      <div id="account-login" class="account-popup reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="header">
+          <h2 class="site-name">VokalPlus</h2>
+
+          <ul class="option">
+            <li>
+              <span class="or">Or</span>
+              <a href="#" class="active">Login</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="account-register">Sign Up</a>
+            </li>
+          </ul>
+        </header>
+        
+        <div class="body">
+          <ul class="social-login">
+            <li><a href="" class="login-facebook">Login With Facebook</a></li>
+            <li><a href="" class="login-googleplus">Login With Google+</a></li>
+          </ul>
+          
+          <div class="or-separator"><span>Or login with your email</span></div>
+          
+          <form action="" class="login-account">
+            <p class="input-wrap has-icon email-wrap">
+              <span class="icon"></span>
+              <input type="text" placeholder="Email Address">
+            </p>
+            <p class="input-wrap has-icon password-wrap">
+              <span class="icon"></span>
+              <input type="password" placeholder="Password">
+            </p>
+            <p class="remember-wrap">
+              <label for="login-remember-me"><input type="checkbox" id="login-remember-me"> Remember Me</label>
+
+              <a href="" class="forgot-password">Forgot Password</a>
+            </p>
+            <p class="submit-wrap">
+              <input type="submit" value="Login" class="primary wider">
+            </p>
+          </form>          
+        </div><!-- .body -->
+      </div><!-- #account-login.account-popup -->
+
+      <div id="account-register" class="account-popup reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="header">
+          <h2 class="site-name">VokalPlus</h2>
+
+          <ul class="option">
+            <li>
+              <a href="#" data-reveal-id="account-login">Login</a>
+            </li>
+            <li>
+              <span class="or">Or</span>
+              <a href="#" class="active">Sign Up</a>
+            </li>
+          </ul>
+        </header>
+        
+        <div class="body">
+          <ul class="social-login">
+            <li><a href="" class="login-facebook">Register With Facebook</a></li>
+            <li><a href="" class="login-googleplus">Register With Google+</a></li>
+          </ul>
+          
+          <div class="or-separator"><span>Or register with your email</span></div>
+          
+          <form action="" class="register-account">
+            <p class="input-wrap">
+              <label for="">What's your email address?</label>
+              <input type="text">
+            </p>
+            <p class="input-wrap row">
+              <span class="columns small-6 left">
+                <label for="">Choose a passwor</label>
+                <input type="password">
+              </span>
+              <span class="columns small-6 right">
+                <label for="">Re-type password</label>
+                <input type="password">
+              </span>
+            </p>
+            <p class="agree-wrap">
+              <label for="register-agreement"><input type="checkbox" id="register-agreement"> I agree to the Terms of Use and Privacy Policy</label>
+            </p>
+            <p class="submit-wrap">
+              <input type="submit" value="Register" class="primary wider">
+            </p>
+          </form>          
+        </div><!-- .body -->
+      </div><!-- #account-login.account-popup -->      
+
+      <div id="account-register-last-step" class="account-popup reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="header">
+          <h2 class="site-name">VokalPlus</h2>
+
+          <ul class="option">
+            <li>
+              <a href="#" data-reveal-id="account-login">Login</a>
+            </li>
+            <li>
+              <span class="or">Or</span>
+              <a href="#" class="active">Sign Up</a>
+            </li>
+          </ul>
+        </header>
+        
+        <div class="body">
+          <h2 class="last-step-title">One last step...</h2>          
+          <form action="" class="register-account">
+            <p class="input-wrap">
+              <label for="">What name should we show on your profile?</label>
+              <input type="text">
+            </p>
+            <p class="input-wrap">
+              <label for="">Write 10 your favourites artist</label>
+              
+              
+              <span class="num-wrap">
+                <span class="num">1.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">2.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">3.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">4.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">5.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">6.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">7.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">8.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">9.</span>
+                <input type="text">
+              </span>
+
+              
+              <span class="num-wrap">
+                <span class="num">10.</span>
+                <input type="text">
+              </span>
+
+              
+            </p>
+
+            <p class="submit-wrap">
+              <input type="submit" value="Get Started With VokalPlus" class="primary">
+            </p>
+          </form>          
+        </div><!-- .body -->
+      </div><!-- #account-login.account-popup -->            
+
+
+      <!-- ARTICLE TEMPLATES -->
+      <div id="template-content-article" class="post content-article reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon article"></span>
+          <h1 class="post-title">Mengambil Nafas Dari Hidung atau Mulut?</h1>
+          <h5 class="post-author">Article by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-101">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+  
+        </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-375.jpg" alt="">
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-applause-wrap">
+          <a href="#" class="post-applause">
+            <span class="icon"></span>
+            <span class="copy">Give Applause</span>
+          </a>
+        </div><!-- .post-applause-wrap -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-article.content-article.reveal-modal -->
+
+      <div id="template-content-article-loggedin" class="post content-article reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon article"></span>
+          <h1 class="post-title">Mengambil Nafas Dari Hidung atau Mulut?</h1>
+          <h5 class="post-author">Article by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-102">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a ahref="#" class="button message" data-reveal-id="messages">
+              <span class="button-icon"></span>
+              <span class="copy">Message</span>
+            </a>
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-375.jpg" alt="">
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-applause-wrap">
+          <a href="#" class="post-applause">
+            <span class="icon"></span>
+            <span class="copy">Give Applause</span>
+          </a>
+        </div><!-- .post-applause-wrap -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-article.content-article.reveal-modal -->      
+
+      <div id="template-content-article-self" class="post content-article reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon article"></span>
+          <h1 class="post-title">Mengambil Nafas Dari Hidung atau Mulut?</h1>
+          <h5 class="post-author">Article by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-103">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta has-settings">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button settings">
+              <span class="button-icon"></span>
+              <span class="copy">Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-375.jpg" alt="">
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-applause-wrap">
+          <a href="#" class="post-applause">
+            <span class="icon"></span>
+            <span class="copy">Give Applause</span>
+          </a>
+        </div><!-- .post-applause-wrap -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-article.content-article.reveal-modal -->            
+
+      <div id="template-content-event" class="post content-event reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon event"></span>
+          <h1 class="post-title">iTunes Festival</h1>
+          <h5 class="post-author">Event by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-104">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-348-1.jpg" alt="">
+          
+          <div class="post-infos">
+            <div class="post-info">
+              <span class="icon time"></span>
+              <div class="info time">Friday, 4 April 2014 at 13:00 - 17:00 WIB</div>
+            </div>
+
+            <div class="post-info">
+              <span class="icon location"></span>
+              <span class="info location-name">Jakarta Convention Center</span>
+              <span class="info location-address">Jl. Jend. Gatot Subroto, Jakarta 10270</span>
+
+              <div class="map">
+                <a href="#" class="toggle-map">
+                  <span class="show-map">Show Map</span>
+                  <span class="hide-map">Hide Map</span>
+                </a>
+
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/d/embed?mid=zT7m8YlwpQj4.kXceH5feP_00" width="100%" height="200"></iframe>              
+                </div>
+              </div>
+            </div>            
+          </div><!-- .post-infos -->
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-event.content-event.reveal-modal -->
+
+      <div id="template-content-event-loggedin" class="post content-event reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon event"></span>
+          <h1 class="post-title">iTunes Festival</h1>
+          <h5 class="post-author">Event by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-105">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a ahref="#" class="button message" data-reveal-id="messages">
+              <span class="button-icon"></span>
+              <span class="copy">Message</span>
+            </a>
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-348-1.jpg" alt="">
+          
+          <div class="post-infos">
+            <div class="post-info">
+              <span class="icon time"></span>
+              <div class="info time">Friday, 4 April 2014 at 13:00 - 17:00 WIB</div>
+            </div>
+
+            <div class="post-info">
+              <span class="icon location"></span>
+              <span class="info location-name">Jakarta Convention Center</span>
+              <span class="info location-address">Jl. Jend. Gatot Subroto, Jakarta 10270</span>
+
+              <div class="map">
+                <a href="#" class="toggle-map">
+                  <span class="show-map">Show Map</span>
+                  <span class="hide-map">Hide Map</span>
+                </a>
+
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/d/embed?mid=zT7m8YlwpQj4.kXceH5feP_00" width="100%" height="200"></iframe>
+                </div>
+              </div>
+            </div>            
+          </div><!-- .post-infos -->
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-event.content-event.reveal-modal -->
+
+      <div id="template-content-event-self" class="post content-event reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon event"></span>
+          <h1 class="post-title">iTunes Festival</h1>
+          <h5 class="post-author">Event by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-106">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta has-settings">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button settings">
+              <span class="button-icon"></span>
+              <span class="copy">Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-348-1.jpg" alt="">
+          
+          <div class="post-infos">
+            <div class="post-info">
+              <span class="icon time"></span>
+              <div class="info time">Friday, 4 April 2014 at 13:00 - 17:00 WIB</div>
+            </div>
+
+            <div class="post-info">
+              <span class="icon location"></span>
+              <span class="info location-name">Jakarta Convention Center</span>
+              <span class="info location-address">Jl. Jend. Gatot Subroto, Jakarta 10270</span>
+
+              <div class="map">
+                <a href="#" class="toggle-map">
+                  <span class="show-map">Show Map</span>
+                  <span class="hide-map">Hide Map</span>
+                </a>
+
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/d/embed?mid=zT7m8YlwpQj4.kXceH5feP_00" width="100%" height="200"></iframe>              
+                </div>
+              </div>
+            </div>            
+          </div><!-- .post-infos -->
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-event.content-event.reveal-modal -->
+
+      <div id="template-content-video" class="post content-video reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon video"></span>
+          <h1 class="post-title">Girl On Fire</h1>
+          <h5 class="post-author">Video by <a href="">Alicia Keys</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-107">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <iframe width="600" height="338" src="//www.youtube.com/embed/J91ti_MpdHA" frameborder="0" allowfullscreen></iframe>
+
+          <p>The Odd Couple of the Marvel Universe, Cable is a soldier from the future, fighting for peace today while Deadpool is the wisecracking, gun-for-hire by-product of the military’s Weapon X program. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for. Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-video.content-video.reveal-modal -->
+
+      <div id="template-content-video-loggedin" class="post content-video reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon video"></span>
+          <h1 class="post-title">Girl On Fire</h1>
+          <h5 class="post-author">Video by <a href="">Alicia Keys</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-108">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a ahref="#" class="button message" data-reveal-id="messages">
+              <span class="button-icon"></span>
+              <span class="copy">Message</span>
+            </a>
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <iframe width="600" height="338" src="//www.youtube.com/embed/J91ti_MpdHA" frameborder="0" allowfullscreen></iframe>
+
+          <p>The Odd Couple of the Marvel Universe, Cable is a soldier from the future, fighting for peace today while Deadpool is the wisecracking, gun-for-hire by-product of the military’s Weapon X program. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for. Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+            
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-video.content-video.reveal-modal -->      
+
+      <div id="template-content-video-self" class="post content-video reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon video"></span>
+          <h1 class="post-title">Girl On Fire</h1>
+          <h5 class="post-author">Video by <a href="">Alicia Keys</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-109">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta has-settings">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button settings">
+              <span class="button-icon"></span>
+              <span class="copy">Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <iframe width="600" height="338" src="//www.youtube.com/embed/J91ti_MpdHA" frameborder="0" allowfullscreen></iframe>
+
+          <p>The Odd Couple of the Marvel Universe, Cable is a soldier from the future, fighting for peace today while Deadpool is the wisecracking, gun-for-hire by-product of the military’s Weapon X program. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for. Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+            
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-video.content-video.reveal-modal -->      
+
+      <div id="template-content-music" class="post content-music reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon music"></span>
+          <h1 class="post-title">Brand New Me</h1>
+          <h5 class="post-author">Video by <a href="">Alicia Keys</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-110">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66680948&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+          <p>The Odd Couple of the Marvel Universe, Cable is a soldier from the future, fighting for peace today while Deadpool is the wisecracking, gun-for-hire by-product of the military’s Weapon X program. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for. Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-music.content-music.reveal-modal -->    
+
+      <div id="template-content-music-loggedin" class="post content-music reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon music"></span>
+          <h1 class="post-title">Brand New Me</h1>
+          <h5 class="post-author">Video by <a href="">Alicia Keys</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-111">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a ahref="#" class="button message" data-reveal-id="messages">
+              <span class="button-icon"></span>
+              <span class="copy">Message</span>
+            </a>
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66680948&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+          <p>The Odd Couple of the Marvel Universe, Cable is a soldier from the future, fighting for peace today while Deadpool is the wisecracking, gun-for-hire by-product of the military’s Weapon X program. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for. Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+            
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-music.content-music.reveal-modal -->      
+
+      <div id="template-content-music-self" class="post content-music reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon music"></span>
+          <h1 class="post-title">Brand New Me</h1>
+          <h5 class="post-author">Video by <a href="">Alicia Keys</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-112">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta has-settings">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button settings">
+              <span class="button-icon"></span>
+              <span class="copy">Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66680948&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+          <p>The Odd Couple of the Marvel Universe, Cable is a soldier from the future, fighting for peace today while Deadpool is the wisecracking, gun-for-hire by-product of the military’s Weapon X program. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for. Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+            
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-music.content-music.reveal-modal -->     
+
+      <div id="template-content-image" class="post content-image reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon image"></span>
+          <h1 class="post-title">Mengambil Nafas Dari Hidung atau Mulut?</h1>
+          <h5 class="post-author">Article by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-113">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-400-1.jpg" alt="">
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-applause-wrap">
+          <a href="#" class="post-applause">
+            <span class="icon"></span>
+            <span class="copy">Give Applause</span>
+          </a>
+        </div><!-- .post-applause-wrap -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-image.content-image.reveal-modal -->
+
+      <div id="template-content-image-loggedin" class="post content-image reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon image"></span>
+          <h1 class="post-title">Mengambil Nafas Dari Hidung atau Mulut?</h1>
+          <h5 class="post-author">Article by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-114">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a ahref="#" class="button message" data-reveal-id="messages">
+              <span class="button-icon"></span>
+              <span class="copy">Message</span>
+            </a>
+            <a href="" class="button follow">
+              <span class="button-icon"></span>
+              <span class="copy">Follow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-400-1.jpg" alt="">
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-applause-wrap">
+          <a href="#" class="post-applause">
+            <span class="icon"></span>
+            <span class="copy">Give Applause</span>
+          </a>
+        </div><!-- .post-applause-wrap -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-image.content-image.reveal-modal -->      
+
+      <div id="template-content-image-self" class="post content-image reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon image"></span>
+          <h1 class="post-title">Mengambil Nafas Dari Hidung atau Mulut?</h1>
+          <h5 class="post-author">Article by <a href="">VokalPlus</a></h5>
+
+            <div class="object-options-wrap">
+    <a href="#" class="toggle-object-options" id="toggle-object-options-content-115">Toggle Options</a>
+    <ul class="object-options hide">
+
+              <li><a href="">Report</a></li>
+              <li><a href="">Block</a></li>
+              <li><a href="">Menu 3</a></li>
+      
+    </ul>
+    <div class="object-dropdown-overlay"></div>
+  </div><!-- .object-options-wrap --> 
+          </header>
+
+        <div class="post-meta has-settings">
+          <div class="info first has-icon">
+            <div class="icon"></div>
+            <span class="count">345</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon views"></div>
+            <span class="count">1.2K</span>
+          </div>
+          <div class="info has-icon">
+            <div class="icon comments"></div>
+            <span class="count">10</span>
+          </div>
+          <div class="info has-button">
+            <a href="" class="button settings" data-reveal-id="edit-image">
+              <span class="button-icon"></span>
+              <span class="copy">Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <img src="images/dummy/post-image-600-400-1.jpg" alt="">
+
+          <p>In her inaugural arc, Jessicas life immediately becomes expendable when she uncovers the potentially explosive secret of one heros true identity. Looking for the one superhero comic you just have to read. Jessica Jones had Joined the Avengers. Collects Alias #1-28, What If.</p>
+          <p>Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. Avengers Assemble. Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. In a city of Marvels, Jessica Jones never found her niche.</p>
+          <p>Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Amazing Spider-Man is the cornerstone of the Marvel Universe. But her wit, charm and intelligence just may help her survive through another day. Thrust into the midst of a conspiracy that reaches the highest levels, has Jessica burned too many bridges to turn to old friends for help.</p>
+
+        </div><!--.post-content -->
+
+        <div class="post-applause-wrap">
+          <a href="#" class="post-applause">
+            <span class="icon"></span>
+            <span class="copy">Give Applause</span>
+          </a>
+        </div><!-- .post-applause-wrap -->
+
+        <div class="post-share">
+          <h3 class="title">Share It</h3>          
+
+          <ul class="share-links">
+            <li><a href="#" class="nav twitter">Twitter</a></li>
+            <li><a href="#" class="nav facebook">Facebook</a></li>
+            <li><a href="#" class="nav googleplus">Google+</a></li>
+          </ul>
+        </div> <!-- .post-share -->
+
+        <div class="post-comments">
+          <h3 class="section-title">Discuss It</h3>
+
+          <div class="comment first">
+            <img src="images/dummy/avatar-41-41-1.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Jennifer Lopez</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment">
+            <img src="images/dummy/avatar-41-41-2.jpg" alt="" class="avatar">
+
+            <div class="comment-meta">
+              <a href="#" class="author">Harry Connick Jr</a> | About 11 Hour ago
+            </div><!-- .comment-meta -->
+
+            <div class="comment-content">
+              <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Youve found it. Traveling back and forth through time, Cable recently traveled back to the future with a special purpose: Protect a mutant baby who could be mutantkind’s savior. Sparks fly when this oddest of all couples kicks butts and takes names throughout the Marvel Universe.</p>
+            </div><!-- .comment-content -->
+          </div><!-- .comment -->
+
+          <div class="comment-form">
+            <textarea name="" id="" cols="30" rows="5" placeholder="Discuss it here..."></textarea>
+          </div>
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </div><!-- .post-comments -->
+      </div><!-- #template-content-image.content-image.reveal-modal -->               
+      
+      <!-- TESTIMONIAL TEMPLATE -->
+      <div id="submit-testimonial" class="post content-testimonial reveal-modal" data-reveal>
+        <a class="close-reveal-modal">&#215;</a>
+
+        <header class="post-header">
+          <span class="icon testimonial"></span>
+          <h1 class="post-title">Add Testimonial</h1>
+          <h5 class="post-author">to <a href="">Alicia Keys</a></h5>
+        </header>
+        
+        <form action="" class="submit-testimonial-form">
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+            
+          <p class="character-count">Character Left <span class="count">1.000</span></p>
+          <p class="submit-wrap">
+            <input type="submit" value="Submit" class="primary wider">
+          </p>
+        </form>
+
+      </div><!-- #template-submit-testimonial.post.content-testimonial.reveal-modal -->
+
+      <!-- MESSAGE TEMPLATE -->
+      <div id="messages" class="modal-app reveal-modal" data-reveal>
+        <div class="modal-app-wrap">
+
+          <a class="close-reveal-modal">&#215;</a>
+
+          <header class="app-header">
+            <span class="icon message"></span>
+            <h1 class="app-title">Messages</h1>
+
+            <a href="#" class="button primary compose" id="compose-message">Compose</a>
+          </header>
+
+          <div class="app-body" id="message-body">
+            <ul id="conversation-picker">
+              <li id="new-conversation-list" class="hide">
+                <a href="" class="conversation active">
+                  <span class="avatar"><img src="images/defaults/conversation-list-new.png" alt=""></span>
+                  <span class="name-placeholder">New Message</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="conversation active">
+                  <span class="avatar"><img src="images/dummy/avatar-40-40-1.jpg" alt=""></span>
+                  <span class="name">Alicia Keys</span>
+                  <span class="time">About 11 hour ago</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="conversation">
+                  <span class="avatar"><img src="images/dummy/avatar-40-40-2.jpg" alt=""></span>
+                  <span class="name">Keith Urban</span>
+                  <span class="time">About 12 hour ago</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="conversation">
+                  <span class="avatar"><img src="images/dummy/avatar-40-40-3.jpg" alt=""></span>
+                  <span class="name">Jennifer Lopez</span>
+                  <span class="time">Jan 20, 2014 - 22:00</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="conversation">
+                  <span class="avatar"><img src="images/dummy/avatar-40-40-4.jpg" alt=""></span>
+                  <span class="name">Harry Connick Jr.</span>
+                  <span class="time">Jan 10, 2014 - 05:00</span>
+                </a>
+              </li>
+            </ul>
+
+            <div id="conversation">
+
+              <div class="chat">
+                <a href="#" class="avatar"><img src="images/dummy/avatar-30-30-1.jpg" alt=""></a>
+                <div class="meta">
+                  <a href="" class="name">Alicia Keys</a> | <span class="time">September 7, 2014 - 14:00</span>
+                </div><!-- .meta -->
+                <div class="content">
+                  <p>Amazing Spider-Man is the cornerstone of the Marvel Universe. Like a sci fi Lone Wolf & Cub, the new Cable series is packed with action, adventure, humor and everything else an X-Men fan could ask for.</p>
+                </div><!-- .content -->
+              </div><!-- .chat -->
+
+              <div class="chat self">
+                <a href="#" class="avatar"><img src="images/dummy/avatar-30-30-2.jpg" alt=""></a>
+                <div class="meta">
+                  <a href="" class="name">Alicia Keys</a> | <span class="time">September 7, 2014 - 14:00</span>
+                </div><!-- .meta -->
+                <div class="content">
+                  <p>This is where youll find all the big-time action, major storylines and iconic.</p>
+                </div><!-- .content -->
+              </div><!-- .chat -->
+
+              <div class="chat">
+                <a href="#" class="avatar"><img src="images/dummy/avatar-30-30-1.jpg" alt=""></a>
+                <div class="meta">
+                  <a href="" class="name">Alicia Keys</a> | <span class="time">September 7, 2014 - 14:00</span>
+                </div><!-- .meta -->
+                <div class="content">
+                  <p>See the Avengers go up against Ultron, Kang, the Masters of Evil and more over three decades of epic action.</p>
+                </div><!-- .content -->
+              </div><!-- .chat -->
+
+              <form action="" id="conversation-reply-form">
+                <p class="to-wrap">
+                  <label for="conversation-reply-to">To:</label>
+                  <span class="input-wrap vokalplus-userpicker-wrap">
+                    <input type="text" id="conversation-reply-to" class="vokalplus-userpicker">
+                  </span>
+                </p>
+                <p class="reply-wrap">
+                  <input type="text" name="conversation-reply" id="conversation-reply" placeholder="Message">                
+                </p>
+                <input type="submit" value="Reply" class="primary wider">
+              </form>
+
+            </div><!-- #conversation -->
+          </div><!-- .app-body#message-body -->        
+          
+        </div>
+      </div><!-- #messages.post -->
+
+        
+  <div class="row">
+    <div class="small-12 columns page" id="content">
+      <div class="row page">
+        <div class="small-9 columns">
+
+          <div id="primary">
+            
+            <div class="entry entry-page">
+              <h2>Contact Form</h2>
+
+              <form action="">
+                <p>
+                  <label for="email-address">Email Address</label>
+                  <input type="text" id="email-address">
+                </p>
+
+                <p>
+                  <label for="email-subject">Subject</label>
+                  <select name="email-subject" id="email-subject">
+                    <option value="">Suggestion</option>
+                    <option value="">Bug Report</option>
+                    <option value="">Job Hunting</option>
+                  </select>
+                </p>
+
+                <p>
+                  <label for="email-message">Message</label>
+                  <textarea name="" id="email-message" cols="30" rows="10"></textarea>
+                </p>
+
+                <p class="submit-wrap">
+                  <input type="submit" value="Submit" class="primary wider">
+                </p>
+              </form>
+
+              <span class="separator"></span>
+
+              <h2>Contact Address</h2>
+
+              <p>Visit our help pages for support and answers to sales & billing questions. <br>
+                Use the email links below to contact us for related enquiries.</p>
+
+              <h4>VokalPlus HQ</h4>
+
+              <p>
+                Jalan Haji R. Rasuna Said No.Kav C11-14, <br>
+                Setiabudi, Kota Jakarta Selatan, DKI Jakarta 12910.
+              </p>
+
+              <p>
+                Telp   : 021-45678912 <br>
+                Fax   : 021-78904321
+              </p>
+            </div>
+
+          </div><!-- #primary -->
+        </div><!-- .small-9.columns -->
+        
+        <div class="small-3 columns">
+          <div id="secondary">
+
+                <div class="entry sidebar">
+      <h3>Legal</h3>
+
+      <ul>
+        <li><a href="">Terms of Use</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Cookies Policy</a></li>
+        <li><a href="">Community Guideline</a></li>
+      </ul>
+
+      <span class="separator"></span>
+
+      <h3>Copyright</h3>
+
+      <ul>
+        <li><a href="">Learn about copyright</a></li>
+        <li><a href="">Report Copyright Infringement</a></li>
+      </ul>
+
+      <span class="separator"></span>
+
+      <h3>About</h3>
+
+      <ul>
+        <li><a href="">About VokalPlus</a></li>
+        <li><a href="">Company Information</a></li>
+        <li><a href="">Press Information</a></li>
+      </ul>
+
+      <span class="separator"></span>
+
+    </div>
+  
+          </div><!-- #secondary -->
+        </div><!-- .small-3.columns -->
+
+
+      </div><!-- .row -->
+    </div><!-- .small-12.columns#content -->
+  </div><!-- .row -->
+
+        
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="banner-wide">
+              <a href="">
+                <img src="images/dummy/banner-rec-728-90-2.jpg" alt=""/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="contain-to-grid" id="footer">
+          <div class="row">
+            <div class="small-12 columns">
+              <div class="row">
+                <div class="small-8 columns">
+                  <section class="footer-about">
+                    VokalPlus is a community of vocalist sharing video and audio of their voice, partiture, article, and projects.
+                  </section><!-- .footer-about -->              
+                </div><!-- .small-8.columns -->
+
+                <div class="small-4 columns">
+                  <ul class="footer-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#" class="has-dropdown" data-dropdown="footer-others" data-options="align:top">Other</a></li>
+                  </ul>
+
+                  <ul id="footer-others" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
+                    <li><a href="">Terms &amp; Condition</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Kopi Darat</a></li>
+                    <li><a href="">Testimonials</a></li>
+                  </ul>                 
+                </div><!-- .small-4.columns -->
+              </div><!-- .row -->       
+            </div>
+          </div>
+        </footer>    
+
+        
+        <div id="dropdown-overlay" class="hide"></div>
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>       
+        <script src="bower_components/iCheck/icheck.min.js"></script>       
+                <script src="bower_components/jquery-ui/jquery-ui.js"></script> 
+        <script src="bower_components/jquery-ui/ui/autocomplete.js"></script> 
+        <script>
+          $(function() {
+            var users = [
+              {
+                label   : "Alicia Keys",
+                value   : "Alicia Keys",
+                username  : "aliciakeys",
+                avatar : "images/dummy/avatar-40-40-1.jpg"  
+              },
+              {
+                label  : "Jennifer Lopez",
+                value  : "Jennifer Lopez",
+                username  : "jenniferlopez",
+                avatar : "images/dummy/avatar-40-40-2.jpg"  
+              },
+              {
+                label  : "Amy Search",
+                value  : "Amy Search",
+                username  : "amysearch",
+                avatar : "images/dummy/avatar-40-40-3.jpg"  
+              },
+              {
+                label  : "The Aats",
+                value  : "The Aats",
+                username  : "theaats",
+                avatar : "images/dummy/avatar-40-40-4.jpg"  
+              },
+            ];
+            $( ".vokalplus-userpicker-wrap" ).prepend('<div class="vokalplus-userpicker-placeholder"><span></span></div><div class="vokalplus-userpicker-typed"><span></span></div>');
+            $( ".vokalplus-userpicker" ).autocomplete({
+              minLength: 0,
+              source: users,
+              response: function( event, ui ){
+                var picker      = $(this);
+                var wrap        = picker.closest( '.vokalplus-userpicker-wrap' );
+                var typed       = wrap.find( '.vokalplus-userpicker-typed span' );
+                var placeholder = wrap.find( '.vokalplus-userpicker-placeholder span' );
+                var ui_autocomplete = $('.ui-autocomplete.ui-widget-content' );
+
+                // Update background placeholder & typed area
+                if( typeof ui.content[0] === 'undefined' ){
+                  typed.empty();
+                  placeholder.empty();                          
+                } else {
+                  var input       = picker.val();
+                  var suggestion  = ui.content[0].label;
+
+                  typed.text( input );
+                  placeholder.text( suggestion );                          
+                }
+
+              },
+              focus: function( event, ui ){
+                var picker      = $(this);
+                var wrap        = picker.closest( '.vokalplus-userpicker-wrap' );
+                var typed       = wrap.find( '.vokalplus-userpicker-typed span' );
+                var placeholder = wrap.find( '.vokalplus-userpicker-placeholder span' );
+
+                // Empty the suggestion
+                typed.empty();
+                placeholder.empty();                        
+              }
+            }).autocomplete( "instance" )._renderItem = function( ul, item ){
+              // return $( "li" ).append( "<a><span class='user-avatar'><img src='"+ item.avatar +"'></span><span class='user-name'>" + item.label + "</span></a>" );
+              return $( "<li class='userpicker-item-wrap'>" )
+                .attr( "data-value", item.value )
+                .append( '<span class="userpicker-item"><img src="'+item.avatar+'" class="avatar"><span class="name">'+item.label+'</span></span>' )
+                .appendTo( ul );
+            };
+        });   
+        </script>
+        <script src="bower_components/chosen/chosen.jquery.js"></script>
+        <script src="bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
+        <script src="bower_components/foundation/js/foundation.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/live.js"></script>
+      </body>
+    </html>

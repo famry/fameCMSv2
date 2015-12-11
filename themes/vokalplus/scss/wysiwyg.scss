@@ -1,0 +1,13 @@
+@import "vokalplus-variables";
+@import "vokalplus-typography";
+
+body#tinymce{
+	font-family: $font__quattrocento;
+	color: $color__text;
+	font-size: 16px;
+	padding: 20px !important;
+
+	a{
+		color: $color__accent;
+	}
+}

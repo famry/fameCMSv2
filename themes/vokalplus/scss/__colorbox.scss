@@ -1,0 +1,137 @@
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999;}
+#cboxWrapper {
+    max-width:none;
+    box-shadow: 0 0 5px #222;
+}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{
+    background: rgba( 0, 0, 0, 0.7 );
+}
+
+#colorbox{
+    outline:0;
+}
+
+#cboxContent{
+    background:#fff;
+}
+
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+
+#cboxTitle{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    font-size: rem-calc( 14px );
+    padding: 15px 15px;
+    background: url( ../images/photo-action-bg.png );
+}
+
+#cboxCurrent{
+    display: none;
+}
+
+#cboxLoadingOverlay{
+    
+}
+
+#cboxLoadingGraphic{
+    background: url( ../images/loading.gif ) no-repeat center center; 
+}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+
+button#cboxPrevious{
+    position:absolute; 
+    bottom:50%; 
+    left:10px; 
+    @include sprite_replace_text( colorbox-prev, 11, 19 );
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover{
+        opacity: .8;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+button#cboxNext{
+    position:absolute; 
+    bottom:50%; 
+    right:10px; 
+    @include sprite_replace_text( colorbox-next, 11, 19 );
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover{
+        opacity: .8;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+button#cboxClose{
+    position: absolute; 
+    top: 10px;
+    bottom: auto; 
+    right: -40px; 
+    padding: 0;
+    background-color: transparent;
+    @include sprite_replace_text_clickable( close-reveal-modal, 40, 40 );
+    @include radius( 0 );
+    box-shadow: none;
+}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}

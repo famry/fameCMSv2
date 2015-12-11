@@ -1,0 +1,225 @@
+/*
+Font Style
+*/
+@font-face {
+font-family: bookman;
+src: url('themes/philip/font/bookman-old-style/bookos.eot?#iefix') format('embedded-opentype'), 
+url('themes/philip/font/bookman-old-style/bookos.otf') format('otf'),
+url('themes/philip/font/bookman-old-style/bookos.woff') format('woff'),
+url('themes/philip/font/bookman-old-style/bookos.ttf')  format('truetype'), 
+url('themes/philip/font/bookman-old-style/bookos.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+/*
+* Base structure
+*/
+html { 
+height:100%;
+}
+body { 
+min-height:100%;
+font-family:bookman;
+}
+
+/*
+* Sidebar
+*/
+.sidebar-width {
+width:20%
+}
+.sidebar-container {
+margin:0px 50px;
+}
+
+#site-logo{
+	margin-top:70px;
+	margin-bottom:40px;
+	text-align:center;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	background-color: #044356;
+	border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+.nav-sidebar > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+
+#site-menu{
+	min-height:320px;
+}
+
+ul#sidebar-menu{
+	list-style-type:none;
+	padding-left:0px;
+	border-left:3px solid #d55c28;
+}
+
+ul#sidebar-menu ul{
+	list-style-type:none;
+	padding-left:0px;
+}
+
+ul#sidebar-menu li{
+	margin-top:8px;
+	margin-bottom:8px;
+}
+
+ul#sidebar-menu ul li a{
+	text-decoration:none;
+	padding-left:25px;
+}
+
+ul#sidebar-menu li a{
+	color:white;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-size:12px;
+	margin-left:0px;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:5px;
+	padding-right:15px;
+	letter-spacing:2px;
+}
+
+ul#sidebar-menu li.active a{
+	background-color:#d55c28;
+	color:#021128;
+}
+
+
+#site-socmed{
+margin-top:20px;
+text-align:center;
+	font-size:20px;
+}
+
+#site-socmed i{
+	color:white;
+	margin:10px;
+}
+
+#site-socmed .fa{
+	color:#a4c9db;
+}
+
+#copyright{
+	margin-top:10px;
+	text-align:center;
+	color:#a4c9db;
+	text-transform:uppercase;
+	font-size:8px;
+	letter-spacing:1px;
+}
+/*
+	Slider Custom
+*/
+#myCarousel .custom-arrow{
+	position:absolute;
+	bottom:15px;
+	z-index:99;
+}
+
+#myCarousel  .left.custom-arrow{
+	font-size:28px;
+	left:20px;
+	color:#FFF;
+}
+
+#myCarousel  .right.custom-arrow{
+	font-size:28px;
+	left:50px;
+	color:#FFF;
+}
+
+#myCarousel  .carousel-indicators {
+	bottom: 10px;
+	left:auto;
+	margin-left:0px;
+	text-align:right;
+	width:100%;
+	right:20px;
+}
+#myCarousel .carousel-indicators li {
+	background-color:#FFF;
+	height: 10px;
+	width: 10px;
+}
+#myCarousel .carousel-indicators li.active {
+	background-color:#d55c28;
+}
+
+/*
+	Content
+*/
+.content-container{
+	margin-left:20%;
+	width:80%;
+}
+#page-detail{
+	position:absolute;
+	width:35%;
+	height:100%;
+	top:0;left:0;
+	z-index:100;
+	background-color:#e2dfd7;
+	opacity:0.5;
+	display:none;
+}
+#page-detail h2{
+	font-size:30px;
+	text-transform:uppercase;
+	color:#000;
+}
+#page-detail .page-detail-container{
+	margin:100px 60px;
+}
+#page-detail .page-description{
+	margin-top:30px;
+	height:400px;
+	min-height:400px;
+	overflow:auto;
+	color:#000;
+}
+
+#show-page-detail{
+	position:absolute;
+	height:100%;
+	top:0;
+	z-index:1;
+	display:block;
+	z-index:100;
+	background-color:#FFF;
+}
+.middle-content{
+	position:relative;
+	top:50%;
+	color:#b9b9b9;
+	font-size:12px;
+	margin:3px;
+}
